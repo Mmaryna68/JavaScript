@@ -81,3 +81,17 @@ console.log(
   `К концу расчётного периода прирост составил ${growth} руб., и на данный момент ваш депозит составляет ${newDeposit} руб.`
 );
 console.log(`Через год у вас будет ${finalDeposit.toFixed(2)} руб. на счету`); //Ваш депозит на начало расчётного периода составлял 30000 руб. Согласно вашему тарифу, вам была присвоена ставка 18.5%. К концу расчётного периода прирост составил 150 руб., и на данный момент ваш депозит составляет 30150 руб. Через год у вас будет 35727.75 руб. на счету
+
+//task2**
+function calculate() {
+  const amountInput = document.getElementById("deposit-amount");
+  const resultElement = document.getElementById("result");
+
+  const amount = parseFloat(amountInput.value);
+  const interestRate = 0.07;
+  const balance = amount + amount * interestRate;
+
+  resultElement.textContent = `Через год у вас будет ${balance.toFixed(
+    2
+  )} руб. на счету`;
+}
